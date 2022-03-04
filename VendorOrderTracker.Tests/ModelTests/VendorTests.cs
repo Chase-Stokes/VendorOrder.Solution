@@ -43,5 +43,14 @@ namespace VendorOrderTracker.Tests
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      Vendor newVendor1 = new Vendor("goku", "he likes to train to be the strongest");
+      Vendor newVendor2 = new Vendor("naruto", "hes gonna be hokage one day");
+      Vendor result = Vendor.Find(1);
+      Assert.AreEqual(newVendor2, result);
+    }
   }
 }
