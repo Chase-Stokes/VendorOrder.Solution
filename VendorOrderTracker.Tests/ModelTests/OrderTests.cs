@@ -18,10 +18,10 @@ namespace VendorOrderTracker.Tests
         string date = "3/4/2022";
         Order orderOne = new Order(title, description, price, date);
         Order orderTwo = new Order("Beer", "A case of beer", 35, "3/4/2022");
-        string titleResult = orderTwo.Title;
-        string descriptionResult = orderTwo.Description;
-        int priceResult = orderTwo.Price;
-        string dateResult = orderTwo.Date;
+        string titleResult = orderOne.Title;
+        string descriptionResult = orderOne.Description;
+        int priceResult = orderOne.Price;
+        string dateResult = orderOne.Date;
         Assert.AreEqual(title, titleResult);
         Assert.AreEqual(description, descriptionResult);
         Assert.AreEqual(price, priceResult);
