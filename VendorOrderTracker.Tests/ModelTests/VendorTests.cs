@@ -52,5 +52,17 @@ namespace VendorOrderTracker.Tests
       Vendor result = Vendor.Find(1);
       Assert.AreEqual(newVendor1, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      Order orderOne = new Order("Wine", "A case of wine", 50, "3/3/2022");
+      Order orderTwo = new Order("Beer", "A case of beer", 35, "3/4/2022");
+      List<Order> newList = new List<Order> { orderTwo };
+      Vendor newVendor = new Vendor("naruto", "hes gonna be hokage one day");
+      newVendor.AddItem(orderOne);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
