@@ -44,11 +44,11 @@ namespace VendorOrderTracker.Tests
       }
 
       [TestMethod]
-    public void Find_ReturnsCorrectItem_Item()
+    public void Find_ReturnsCorrectOrder_Order()
     {
       Order orderOne = new Order("Wine", "A case of wine", 50, "3/3/2022");
       Order orderTwo = new Order("Beer", "A case of beer", 35, "3/4/2022");
-      Order result = Order.Find(2);
+      Order result = Order.Find(1);
       Assert.AreEqual(orderOne, result);
     }
   }
