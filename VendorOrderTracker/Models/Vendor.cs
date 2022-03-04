@@ -12,7 +12,7 @@ namespace VendorOrderTracker.Models
     public int Id { get; }
     public List<Order> Orders { get; set; }
 
-    public Category(string name, string description)
+    public Vendor(string name, string description)
     {
       Name = name;
       Description = description;
