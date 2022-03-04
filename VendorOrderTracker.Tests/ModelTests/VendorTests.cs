@@ -50,7 +50,7 @@ namespace VendorOrderTracker.Tests
       Vendor newVendor1 = new Vendor("goku", "he likes to train to be the strongest");
       Vendor newVendor2 = new Vendor("naruto", "hes gonna be hokage one day");
       Vendor result = Vendor.Find(1);
-      Assert.AreEqual(newVendor2, result);
+      Assert.AreEqual(newVendor1, result);
     }
   }
 }
