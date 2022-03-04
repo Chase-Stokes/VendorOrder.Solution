@@ -20,5 +20,15 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(name, nameResult);
       Assert.AreEqual(description, descriptionResult);
     }
+
+    [TestMethod]
+      public void GetAll_ReturnsAllVendors_VendorList()
+      {
+        Vendor newVendor1 = new Vendor("goku", "he likes to train to be the strongest");
+        Vendor newVendor2 = new Vendor("naruto", "hes gonna be hokage one day");
+        List<Vendor> orderList = new List<Vendor> {newVendor1, newVendor2};
+        List<Vendor> result = Vendor.GetAll();
+        CollectionAssert.AreEqual(orderList, result);
+      }
   }
 }
