@@ -48,7 +48,7 @@ namespace VendorOrderTracker.Tests
       {
         Order orderOne = new Order("Wine", "A case of wine", 50, "3/3/2022");
         int result = orderOne.Id;
-        Assert.AreEqual(2, result);
+        Assert.AreEqual(1, result);
       }
       [TestMethod]
     public void Find_ReturnsCorrectOrder_Order()
