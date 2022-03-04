@@ -7,8 +7,13 @@ namespace VendorOrderTracker.Tests
 {
   [TestClass]
   
-    public class OrderTests
+    public class OrderTests : IDisposable
     {
+
+      public void Dispose()
+      {
+        Order.ClearAll();
+      }
       [TestMethod]
       public void OrderConstructor_ChecksOrderObject_Strings()
       {
@@ -33,7 +38,6 @@ namespace VendorOrderTracker.Tests
       {
         Order orderOne = new Order("Wine", "A case of wine", 50, "3/3/2022");
         Order orderTwo = new Order("Beer", "A case of beer", 35, "3/4/2022");
-        Order orderThree = new Order("Beer", "A case of beer", 35, "3/4/2022");
         List<Order> orderList = new List<Order> {orderOne, orderTwo};
         List<Order> result = Order.GetAll();
         CollectionAssert.AreEqual(orderList, result);
