@@ -15,8 +15,8 @@ namespace VendorOrderTracker.Tests
       string description = "ed has 2 friends named edd and eddie";
       Vendor newVendor = new Vendor(name, description);
       Vendor newVendor2 = new Vendor("naruto", "hes gonna be hokage one day");
-      string nameResult = newVendor2.Name;
-      string descriptionResult = newVendor2.Description;
+      string nameResult = newVendor.Name;
+      string descriptionResult = newVendor.Description;
       Assert.AreEqual(name, nameResult);
       Assert.AreEqual(description, descriptionResult);
     }
