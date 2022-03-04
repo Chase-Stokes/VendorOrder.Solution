@@ -42,6 +42,14 @@ namespace VendorOrderTracker.Tests
         List<Order> result = Order.GetAll();
         CollectionAssert.AreEqual(orderList, result);
       }
+
+      [TestMethod]
+    public void Find_ReturnsCorrectItem_Item()
+    {
+      Order orderOne = new Order("Wine", "A case of wine", 50, "3/3/2022");
+      Order orderTwo = new Order("Beer", "A case of beer", 35, "3/4/2022");
+      Order result = Order.Find(2);
+      Assert.AreEqual(orderOne, result);
     }
-  
+  }
 }
