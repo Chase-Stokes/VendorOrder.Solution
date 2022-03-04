@@ -1,14 +1,15 @@
-@{
+@* @{
   Layout = "_Layout";
-}
+} *@
 
 <h1>Order Details: </h1>
 
 <h2>Vendor: @Model["vendor"].Name</h2>
 <h2>@Model["order"].Title</h2>
 <h2>@Model["order"].Description</h2>
-<h2>@Model["order"].Price</h2>
+<h2>$@Model["order"].Price</h2>
 <h2>@Model["order"].Date</h2>
 
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
-<a href='/vendors'>View all vendors</a>
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></p>
+<p><a href='/vendors/@Model["vendor"].Id'>Go back to this vendors orders</a></p>
+<p><a href='/vendors'>View all vendors</a></p>
