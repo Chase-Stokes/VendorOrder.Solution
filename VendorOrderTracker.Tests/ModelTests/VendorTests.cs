@@ -41,7 +41,7 @@ namespace VendorOrderTracker.Tests
     {
       Vendor newVendor = new Vendor("naruto", "hes gonna be hokage one day");
       int result = newVendor.Id;
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(1, result);
     }
   }
 }
